@@ -19,7 +19,7 @@
     <div class="bericht">
         <p>Typ een bericht voor je begeleider</p>
         <form>
-             <textarea name="bericht" id="bericht" cols="45" rows="20" name="message"></textarea><br>
+             <textarea id="bericht" cols="45" rows="20" name="message"></textarea><br>
         <!-- <input type="submit" class="verzenden" value="Verzenden" onclick="return jstest()"> -->
 </form>
 <button class="verzenden" value="Verzenden" onclick="alert()"><input type="submit"></button>
@@ -28,16 +28,20 @@
 </div>
 
         <script>
+
+
             function alert() {
-setTimeout(function(){ window.location.href= 'message.html' }, 3000);
+setTimeout(function(){ window.location.href= 'message.html' }, 10000);
 }
 
 $(document).ready(function () {
 $('button').click(function () {
-        $('.parent').append("<div class='alert alert-success alert-dismissable'>Success! message sent successfully.</div>")
+    var myText = document.getElementById("bericht").value;
+        $('.parent').append("<div class='alert alert-success alert-dismissable'>Success! message sent successfully.<br>Message: " + myText + "</div>")
 })
 
 });
-</script>        
+</script> 
+    
 </body>
 </html>

@@ -1,6 +1,8 @@
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+
     font-size: 12px;
 
 }
@@ -15,7 +17,13 @@ body {
 }
 
 .top {
-    height: 30px
+    height: 40px;
+    background-color: #B182B4;
+
+}
+
+.mid{
+    height: 20px;
 }
 
 .line img {
@@ -35,9 +43,6 @@ body {
     padding-right: 12px;
 }
 
-#date {
-    padding-left: 12px;
-}
 
 #date {
     float: left;
@@ -46,11 +51,11 @@ body {
 
 #time {
     float: right;
-    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .border-line {
-    border-left: 2px solid black;
+    border-left: 2px solid lightgrey;
     height: 580px;
     position: absolute;
     margin: 20px 60px;
@@ -60,14 +65,12 @@ body {
     padding-left: 10px;
     margin-top: 25px;
     padding-right: 12px;
-
-
 }
 
 .circle {
     width: 45px;
     height: 45px;
-    background-color: blue;
+    background-color: #B182B4;
     border-radius: 100%;
     float: left;
     margin: 0 auto;
@@ -82,11 +85,20 @@ body {
 }
 
 .task {
-    border: 1px solid black;
+    border: 1px solid lightgrey;
     text-align: center;
     margin-left: 60px;
     margin-top: 5px;
+    height: 50px;
+    border-radius: 5px
 
+}
+
+.task p {
+    margin: 16px auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px
 }
 
 .bericht {
