@@ -1,0 +1,134 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>App</title>
+
+</head>
+
+<body>
+
+    <div class="iphone">
+
+    <div class="pijltje">
+
+            <a href="message.html">
+    
+    <div class="pijl">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" style="margin-top: 9px;">
+
+        <path id="ic_arrow_back_24px" d="M34,17.125H11.181L21.663,6.644,19,4,4,19,19,34l2.644-2.644L11.181,20.875H34Z" transform="translate(-4 -4)" fill="#fff"/>
+
+      </svg>
+    </div>
+      </a>
+
+    </div>
+
+    
+
+    <div class="bericht">
+
+        
+        <div class="bericht2">
+        <p>Typ een bericht voor je begeleider</p>
+        </div>
+
+        <form>
+
+             <textarea name="bericht" id="bericht" cols="45" rows="20" name="message"></textarea><br>
+
+        <!-- <input type="submit" class="verzenden" value="Verzenden" onclick="return jstest()"> -->
+
+</form>
+<div class="button1">
+    <button class="verzenden" value="Verzenden" onclick="alert()"><input type="submit" style="background-color: #b182b1;"></button>
+</div>
+
+<div class="parent"></div>
+
+</div> 
+
+</div>
+
+
+
+        <script>
+
+            function alert() {
+
+setTimeout(function(){ window.location.href= 'message.html' }, 3000);
+
+}
+
+
+
+$(document).ready(function () {
+
+
+
+$('button').click(function () {
+
+
+
+    // this is added ------------------------------------------
+
+    var message = $.trim($('#bericht').val());
+
+    if (message !== "") {
+
+        $.ajax({
+
+            url: "http://localhost:8888/public/controller.php",
+
+            method: "post",
+
+            data: {
+
+                'sendNotification': '1',
+
+                'name': 'gianni', // here needs to get the name of the patients dat saved on the phone
+
+                'message': message,
+
+                'patientId': '1', // here need the id of the patient that saved on the phone
+
+                'carerId': '3' // here need the id of the carer of the patient
+
+            },
+
+            success: function () {
+
+                $('.parent').append("<div class='alert alert-success alert-dismissable'>Success! message sent successfully. You get soon an answer</div>")
+
+            }
+
+        });
+
+
+
+    }
+
+    // this is added ------------------------------------------
+
+})
+
+
+
+
+
+});
+
+</script>        
+
+</body>
+
+</html>
