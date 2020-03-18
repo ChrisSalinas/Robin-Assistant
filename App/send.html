@@ -50,7 +50,7 @@
 
 </form>
 <div class="button1">
-    <button class="verzenden" value="Verzenden" onclick="alert()"><input type="submit" style="background-color: #b182b1;"></button>
+    <button class="verzenden" value="Verzenden" onclick="alert()">Verzenden</button>
 </div>
 
 <div class="parent"></div>
@@ -87,7 +87,7 @@ $('button').click(function () {
 
         $.ajax({
 
-            url: "http://localhost:8888/public/controller.php",
+            url: "http://www.stackey.nl/controller.php",
 
             method: "post",
 
@@ -95,13 +95,13 @@ $('button').click(function () {
 
                 'sendNotification': '1',
 
-                'name': 'gianni', // here needs to get the name of the patients dat saved on the phone
+                'name': 'Dirk', // here needs to get the name of the patients dat saved on the phone
 
                 'message': message,
 
                 'patientId': '1', // here need the id of the patient that saved on the phone
 
-                'carerId': '3' // here need the id of the carer of the patient
+                'carerId': '1' // here need the id of the carer of the patient
 
             },
 

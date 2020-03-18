@@ -1,79 +1,151 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
+
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
+
+
 <body>
+
     <div class="iphone">
 
+
+
         <div class="top">
-            <div class="line"> <a href="#"><img src="img/menu-burger.png" alt="nav menu" id="nav-bar"></a></div>
-            <div class="line"><a href="send.html"><img src="img/chat-icon.png" alt="text" id="text"></a></div>
+
+            <div class="line"><a href="#"><img src="img/open-menu.png" alt="nav menu" id="nav-bar"></a></div>
+
+            <div class="line"><a href="send.html"><img src="img/chat.png" alt="text" id="text"></a></div>
+
         </div>
-        <div class="mid">
+
+        <div class="top">
+
             <p id="date"></p>
+
             <p id="time"></p>
+
         </div>
+
         <div class="border-line"></div>
+
         <div class="list">
+
             <div class="circle"><p>7:00</p></div>
+
             <div class="task">
+
                 <p>Poets je tanden</p>
+
             </div>
+
         </div>
+
         <div class="list">
+
                 <div class="circle"><p>8:00</p></div>
+
                 <div class="task">
+
                     <p>Neem een douche</p>
+
                 </div>
+
             </div>
+
+
 
             <div class="list">
+
                     <div class="circle"><p>9:00</p></div>
+
                     <div class="task">
+
                         <p>Kam je haar</p>
+
                     </div>
+
                 </div>
+
                 <div class="list">
+
                         <div class="circle"><p>10:00</p></div>
+
                         <div class="task">
+
                             <p>Maak het bed op</p>
+
                         </div>
+
                     </div>
+
                     <div class="list">
+
                             <div class="circle"><p>11:00</p></div>
+
                             <div class="task">
+
                                 <p>Gebruik de vaatwasser</p>
+
                             </div>
+
                         </div>
-    </div>
 
     </div>
+
+
+
+    </div>
+
     <script>
+
         n = new Date();
+
         y = n.getFullYear();
+
         m = n.getMonth() + 1;
+
         d = n.getDate();
+
         document.getElementById("date").innerHTML = d + "-" + m + "-" + y;
 
+
+
         function updateClock() {
+
             var now = new Date(), 
+
                 time = now.getHours() + ':' + now.getMinutes(), 
+
                 date = [now.getDate()];
+
                 document.getElementById('time').innerHTML = [time];
+
                 setTimeout(updateClock, 1000);
+
         }
+
         updateClock();
+
     </script>
+
 </body>
+
+
 
 </html>
